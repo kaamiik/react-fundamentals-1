@@ -1,25 +1,26 @@
 <html>
-	<body>
-		<div id="root"></div>
 
-		<script type="text/babel" data-type="module">
-			import * as React from '/react.js'
-			import { createRoot } from '/react-dom/client.js'
+<body>
+	<div id="root"></div>
 
-			const rootElement = document.getElementById('root')
+	<script type="text/babel" data-type="module">
+		import * as React from '/react.js'
+		import { createRoot } from '/react-dom/client.js'
 
-			const children = 'Hello World'
-			const className = 'container'
-			const props = { children, className }
-			// 🐨 get this props object spread onto the div element
-			const element = <div></div>
+		const rootElement = document.getElementById('root')
 
-			createRoot(rootElement).render(element)
-		</script>
+		const children = 'Hello World'
+		const className = 'container'
+		const props = { children, className }
+		const element = <div {...props} />
 
-		<script type="module" src="/babel-standalone.js"></script>
+		createRoot(rootElement).render(element)
+	</script>
 
-		<!-- this is here to add automatic browser reloading as you save your work -->
-		<script type="module" src="epic_ws.js"></script>
-	</body>
+	<script type="module" src="/babel-standalone.js"></script>
+
+	<!-- this is here to add automatic browser reloading as you save your work -->
+	<script type="module" src="epic_ws.js"></script>
+</body>
+
 </html>
