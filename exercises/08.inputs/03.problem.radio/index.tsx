@@ -36,8 +36,17 @@ function App() {
 				<label htmlFor="colorInput">Favorite Color:</label>
 				<input id="colorInput" name="color" type="color" />
 			</div>
-			{/* 🐨 add a fieldset with the legend "Visibility" */}
-			{/* 🐨 add two radio buttons for public/private options for the name "visibility" */}
+			<fieldset>
+				<legend>Visibility</legend>
+				<label>
+					<input name="visibility" type="radio" value="public" defaultChecked />
+					Public
+				</label>
+				<label>
+					<input name="visibility" type="radio" value="private" />
+					Private
+				</label>
+			</fieldset>
 			<div>
 				<label>
 					<input name="waiver" type="checkbox" />
